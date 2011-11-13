@@ -161,6 +161,12 @@ hsnet_freeaddrinfo(struct addrinfo *ai)
 }
 #endif
 
+INLINE int
+hsnet_socket(int domain, int type, int protocol)
+{
+    return socket(domain, type, protocol);
+}
+
 #if defined(HAVE_WINSOCK2_H)
 # define WITH_WINSOCK  1
 #endif

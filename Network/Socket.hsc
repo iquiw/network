@@ -1562,7 +1562,7 @@ foreign import stdcall unsafe "closesocket"
   c_close :: CInt -> IO CInt
 #endif
 
-foreign import CALLCONV unsafe "socket"
+foreign import CALLCONV unsafe "hsnet_socket"
   c_socket :: CInt -> CInt -> CInt -> IO CInt
 foreign import CALLCONV unsafe "bind"
   c_bind :: CInt -> Ptr SockAddr -> CInt{-CSockLen???-} -> IO CInt
